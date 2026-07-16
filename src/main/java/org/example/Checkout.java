@@ -26,6 +26,6 @@ firstNameInput.sendKeys("Ramil");
 WebElement lastNameInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("last-name")));
 lastNameInput.sendKeys("Memmedov");
 WebElement postalCodeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("postal-code")));
-postalCodeInput.sendKeys("6000");
+postalCodeInput.sendKeys("5000");
 wait.until(ExpectedConditions.elementToBeClickable(By.id("continue"))).click();;
 }}
