@@ -1,16 +1,12 @@
 package test;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
-import pages.BasePage;
 import pages.HomePage;
 import pages.LoginPage;
-import usilis.TestData;
-
-
-
-    public class CartTest extends tests.BaseTest {
+import utils.TestData;
+import pages.LoginPage;
+    public class CartTest extends BaseTest {
 
 
         @Test
