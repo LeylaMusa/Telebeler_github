@@ -2,7 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+<<<<<<< HEAD
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
+=======
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+>>>>>>> e1aa645a734a768f1ef3e33e0f7ebceee30acad1
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -22,7 +26,10 @@
         <webdrivermanager.version>5.7.0</webdrivermanager.version>
         <slf4j.version>2.0.16</slf4j.version>
         <logback.version>1.5.12</logback.version>
+<<<<<<< HEAD
 
+=======
+>>>>>>> e1aa645a734a768f1ef3e33e0f7ebceee30acad1
         <allure.version>2.29.1</allure.version>
     </properties>
 
@@ -42,6 +49,32 @@
             <version>${webdrivermanager.version}</version>
         </dependency>
 
+<<<<<<< HEAD
+=======
+        <!-- SLF4J -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <!-- Logback -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit 4 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+>>>>>>> e1aa645a734a768f1ef3e33e0f7ebceee30acad1
         <!-- Cucumber -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -64,6 +97,7 @@
             <scope>test</scope>
         </dependency>
 
+<<<<<<< HEAD
         <!-- JUnit 4 -->
         <dependency>
             <groupId>junit</groupId>
@@ -72,6 +106,8 @@
             <scope>test</scope>
         </dependency>
 
+=======
+>>>>>>> e1aa645a734a768f1ef3e33e0f7ebceee30acad1
         <!-- Allure -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -79,6 +115,7 @@
             <version>${allure.version}</version>
             <scope>test</scope>
         </dependency>
+<<<<<<< HEAD
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -104,6 +141,12 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
+=======
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.12.0</version>
+>>>>>>> e1aa645a734a768f1ef3e33e0f7ebceee30acad1
             <scope>test</scope>
         </dependency>
 
@@ -112,18 +155,26 @@
     <build>
         <plugins>
 
+<<<<<<< HEAD
             <!-- Java -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
 
+=======
+            <!-- Compiler -->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+>>>>>>> e1aa645a734a768f1ef3e33e0f7ebceee30acad1
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
 
+<<<<<<< HEAD
             <!-- Test Runner -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -131,11 +182,30 @@
                 <version>3.2.5</version>
 
                 <configuration>
+=======
+            <!-- Surefire -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.3</version>
+
+                <configuration>
+
+                    <includes>
+                        <include>**/TestRunner.java</include>
+                    </includes>
+
+                    <excludes>
+                        <exclude>**/SmokeRunner.java</exclude>
+                    </excludes>
+
+>>>>>>> e1aa645a734a768f1ef3e33e0f7ebceee30acad1
                     <systemPropertyVariables>
                         <allure.results.directory>
                             ${project.build.directory}/allure-results
                         </allure.results.directory>
                     </systemPropertyVariables>
+<<<<<<< HEAD
                 </configuration>
             </plugin>
 
@@ -144,6 +214,11 @@
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
                 <version>2.12.0</version>
+=======
+
+                </configuration>
+
+>>>>>>> e1aa645a734a768f1ef3e33e0f7ebceee30acad1
             </plugin>
 
         </plugins>
